@@ -1,7 +1,7 @@
 import { ProductCard } from "@/components/ProductCard";
 import { BottomNav } from "@/components/BottomNav";
 import { products } from "@/data/mockData";
-import { MessageCircle, Bell } from "lucide-react";
+import { MessageCircle, Bell, LogIn } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 
@@ -15,6 +15,14 @@ const Feed = () => {
         <div className="flex items-center justify-between px-4 py-3 max-w-screen-xl mx-auto">
           <h1 className="text-xl font-bold">feed</h1>
           <div className="flex gap-2">
+            <Button 
+              size="icon" 
+              variant="ghost"
+              className="text-primary-foreground hover:bg-primary-foreground/20"
+              onClick={() => navigate("/auth")}
+            >
+              <LogIn className="h-5 w-5" />
+            </Button>
             <Button 
               size="icon" 
               variant="ghost"

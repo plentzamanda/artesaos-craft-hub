@@ -5,37 +5,35 @@ import productDonuts from "@/assets/product-donuts.jpg";
 import productVeggies from "@/assets/product-veggies.jpg";
 import productHearts from "@/assets/product-hearts.jpg";
 import productChristmas from "@/assets/product-christmas.jpg";
+import avatarWoman1 from "@/assets/avatar-woman-1.jpg";
+import avatarMan1 from "@/assets/avatar-man-1.jpg";
+import avatarWoman2 from "@/assets/avatar-woman-2.jpg";
+import avatarWoman3 from "@/assets/avatar-woman-3.jpg";
 
 export const artisans: Artisan[] = [
   {
     id: "1",
     name: "Maria Silva",
-    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Maria",
+    avatar: avatarWoman1,
     location: "São Paulo, SP"
   },
   {
     id: "2",
     name: "João Santos",
-    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Joao",
+    avatar: avatarMan1,
     location: "Rio de Janeiro, RJ"
   },
   {
     id: "3",
     name: "Ana Costa",
-    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Ana",
+    avatar: avatarWoman2,
     location: "Belo Horizonte, MG"
   },
   {
     id: "4",
-    name: "Pedro Lima",
-    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Pedro",
-    location: "Curitiba, PR"
-  },
-  {
-    id: "5",
-    name: "Julia Oliveira",
-    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Julia",
-    location: "Porto Alegre, RS"
+    name: "Rosa Lima",
+    avatar: avatarWoman3,
+    location: "Salvador, BA"
   }
 ];
 
@@ -73,7 +71,7 @@ export const products: Product[] = [
     description: "Coleção de frutas e legumes fofos feitos em crochê. Ótimos para brincar ou decorar.",
     price: 65.00,
     image: productVeggies,
-    artisan: artisans[3],
+    artisan: artisans[2],
     liked: false
   },
   {
@@ -82,7 +80,7 @@ export const products: Product[] = [
     description: "Lindos corações artesanais em feltro, perfeitos para presente ou decoração romântica.",
     price: 55.00,
     image: productHearts,
-    artisan: artisans[4],
+    artisan: artisans[3],
     liked: true
   },
   {

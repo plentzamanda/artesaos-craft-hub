@@ -2,10 +2,12 @@ import { BottomNav } from "@/components/BottomNav";
 import { ProductCard } from "@/components/ProductCard";
 import { products, artisans } from "@/data/mockData";
 import { Button } from "@/components/ui/button";
-import { Settings, MapPin, Heart, Package } from "lucide-react";
+import { Settings, MapPin, Heart, Package, Plus } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useNavigate } from "react-router-dom";
 
 const Profile = () => {
+  const navigate = useNavigate();
   const currentUser = artisans[0];
   const userProducts = products.filter(p => p.artisan.id === currentUser.id);
   const likedProducts = products.filter(p => p.liked);
@@ -57,9 +59,18 @@ const Profile = () => {
             </div>
           </div>
 
-          <Button className="w-full bg-primary hover:bg-primary/90">
-            Editar Perfil
-          </Button>
+          <div className="flex gap-3">
+            <Button className="flex-1 bg-primary hover:bg-primary/90">
+              Editar Perfil
+            </Button>
+            <Button 
+              className="flex-1 bg-secondary hover:bg-secondary/90 text-primary"
+              onClick={() => navigate("/adicionar-produto")}
+            >
+              <Plus className="h-4 w-4 mr-2" />
+              Adicionar Produto
+            </Button>
+          </div>
         </div>
       </div>
 

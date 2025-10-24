@@ -11,6 +11,8 @@ import ChatDetail from "./pages/ChatDetail";
 import Group from "./pages/Group";
 import Profile from "./pages/Profile";
 import Cart from "./pages/Cart";
+import Auth from "./pages/Auth";
+import AddProduct from "./pages/AddProduct";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -23,12 +25,14 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Feed />} />
+          <Route path="/auth" element={<Auth />} />
           <Route path="/produtos" element={<Products />} />
           <Route path="/produto/:id" element={<ProductDetail />} />
           <Route path="/chat" element={<Chat />} />
           <Route path="/chat/:id" element={<ChatDetail />} />
           <Route path="/grupo" element={<Group />} />
           <Route path="/perfil" element={<Profile />} />
+          <Route path="/adicionar-produto" element={<AddProduct />} />
           <Route path="/carrinho" element={<Cart />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
